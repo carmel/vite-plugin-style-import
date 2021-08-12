@@ -1,0 +1,77 @@
+{
+  "name": "vite-plugin-style-import",
+  "version": "1.1.1",
+  "description": "A plug-in that imports component library styles on demand",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "author": "Vben",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "npm run build -- --watch",
+    "build": "tsup src/index.ts --dts --format cjs,esm",
+    "prepublishOnly": "pinst --disable && yarn build",
+    "log": "conventional-changelog -p angular -i CHANGELOG.md -s ",
+    "lint:lint-staged": "lint-staged -c ./.husky/lintstagedrc.js",
+    "lint:pretty": "pretty-quick --staged",
+    "lint:eslint": "eslint \"src/**/*.{ts,tsx}\" --fix",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "install:husky": "is-ci || husky install",
+    "postinstall": "npm run install:husky",
+    "postpublish": "pinst --enable"
+  },
+  "keywords": [
+    "vite",
+    "style",
+    "import",
+    "css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anncwb/vite-plugin-style-import"
+  },
+  "bugs": {
+    "url": "https://github.com/anncwb/vite-plugin-style-import/issues"
+  },
+  "homepage": "https://github.com/anncwb/vite-plugin-style-import/tree/master/#readme",
+  "dependencies": {
+    "@rollup/pluginutils": "^4.1.1",
+    "change-case": "^4.1.2",
+    "debug": "^4.3.2",
+    "es-module-lexer": "^0.7.1",
+    "magic-string": "^0.25.7"
+  },
+  "peerDependencies": {
+    "vite": ">=2.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@types/debug": "^4.1.7",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.4.9",
+    "@typescript-eslint/eslint-plugin": "^4.28.5",
+    "@typescript-eslint/parser": "^4.28.5",
+    "commitizen": "^4.2.4",
+    "conventional-changelog-cli": "^2.1.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jest": "^24.4.0",
+    "husky": "^7.0.1",
+    "ini": "^2.0.0",
+    "jest": "^27.0.6",
+    "lint-staged": "^11.1.1",
+    "pinst": "^2.1.6",
+    "prettier": "^2.3.2",
+    "pretty-quick": "^3.1.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.0.4",
+    "tsup": "^4.12.5",
+    "typescript": "^4.3.5",
+    "vite": "^2.4.4"
+  }
+}
