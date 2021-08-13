@@ -6,7 +6,7 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "license": "MIT",
-  "author": "Vben",
+  "author": "Carmel",
   "files": [
     "dist"
   ],
@@ -20,8 +20,6 @@
     "lint:eslint": "eslint \"src/**/*.{ts,tsx}\" --fix",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "install:husky": "is-ci || husky install",
-    "postinstall": "npm run install:husky",
     "postpublish": "pinst --enable"
   },
   "keywords": [
@@ -32,12 +30,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/anncwb/vite-plugin-style-import"
+    "url": "https://github.com/carmel/vite-plugin-style-import"
   },
   "bugs": {
-    "url": "https://github.com/anncwb/vite-plugin-style-import/issues"
+    "url": "https://github.com/carmel/vite-plugin-style-import/issues"
   },
-  "homepage": "https://github.com/anncwb/vite-plugin-style-import/tree/master/#readme",
+  "homepage": "https://github.com/carmel/vite-plugin-style-import/tree/master/#readme",
   "dependencies": {
     "@rollup/pluginutils": "^4.1.1",
     "change-case": "^4.1.2",
